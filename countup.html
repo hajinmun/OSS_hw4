@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            width: 100%;
+            padding: 50px;
+            text-align: center;
+            background-color: yellow;
+            color: red;
+            font-size: 40px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+
+    <script>
+        var a = 0;
+        let timer = setInterval(changenum, 1000);
+        function changenum() {
+            a += 1;
+            document.getElementById("num").innerText = a;
+        }
+
+        clearInterval(timer);
+    </script>
+</head>
+
+<body>
+    <div>
+        <p id="num">0</p>
+
+        <div>
+            <button>시작</button>
+            <button>중지</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
