@@ -7,10 +7,11 @@
     <title>Document</title>
 
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
         }
+
         p {
             width: 100%;
             padding: 50px;
@@ -31,14 +32,27 @@
     </style>
 
     <script>
-        var a = 0;
-        let timer = setInterval(changenum, 1000);
-        function changenum() {
-            a += 1;
-            document.getElementById("num").innerText = a;
-        }
+        window.onload = function () {
+            var a = 0;
+            let timer;
+            let startc = document.getElementById("startc");
+            let stopc = document.getElementById("stopc");
 
-        clearInterval(timer);
+            startc.addEventListener("click", function () {
+                timer = setInterval(changenum, 1000);
+            });
+            stopc.addEventListener("click", stoptimer);
+
+            function changenum() {
+                a += 1;
+                document.getElementById("num").innerText = a;
+            }
+
+            function stoptimer() {
+                clearInterval(timer);
+                a = 0;
+            }
+        }
     </script>
 </head>
 
@@ -47,8 +61,8 @@
         <p id="num">0</p>
 
         <div>
-            <button>시작</button>
-            <button>중지</button>
+            <button id="startc">시작</button>
+            <button id="stopc">중지</button>
         </div>
 
     </div>
