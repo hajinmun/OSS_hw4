@@ -6,7 +6,15 @@
     <title>Document</title>
 
     <script>
-        window.localStorage.setItem(hasVisited)
+        if(!localStorage.getItem("hasVisited")){
+            alert("환영합니다! 처음 방문해 주셨네요 :)");
+
+            console.log("현재 페이지 경로:", location.pathname);
+
+            localStorage.setItem("hasVisited", true);
+        }else{
+            console.log("현재 페이지 경로:", location.pathname);
+        }
     </script>
 </head>
 <body>
