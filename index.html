@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>웹프로그래밍 과제 모음</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 전체 페이지 기본 스타일 */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      background: #f8f8f8;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* 게시판 스타일 */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    thead {
+      background: #f2f2f2;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    th {
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr {
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    tr:hover {
+      background: #fafafa;
+    }
+
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        padding: 10px;
+      }
+
+      td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 40%;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📂OSS project4</h1>
+    <p>22300263 문하진</p>
+  </header>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>과제 제목</th>
+          <th>제출일</th>
+          <th>링크</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="번호">1</td>
+          <td data-label="과제 제목">lab1</td>
+          <td data-label="제출일">2025-09-27</td>
+          <td data-label="링크"><a href="lab1.html?serverWindowId=6480e606-48de-469a-a84f-b6004a7070e5" target="_blank">보기</a></td>
+        </tr>
+        <tr>
+          <td data-label="번호">2</td>
+          <td data-label="과제 제목">lab2</td>
+          <td data-label="제출일">2025-09-27</td>
+          <td data-label="링크"><a href="lab2.html?serverWindowId=692024c8-adfe-4dab-9946-b1b32c860404" target="_blank">보기</a></td>
+        </tr>
+
+        <tr>
+          <td data-label="번호">3</td>
+          <td data-label="과제 제목">lab3</td>
+          <td data-label="제출일">2025-09-27</td>
+          <td data-label="링크"><a href="lab3.html?serverWindowId=874ff64c-4cc2-4146-9508-cf72538ab4de" target="_blank">보기</a></td>
+        </tr>
+
+        <tr>
+          <td data-label="번호">4</td>
+          <td data-label="과제 제목">lab4</td>
+          <td data-label="제출일">2025-09-28</td>
+          <td data-label="링크"><a href="form_practice.html" target="_blank">보기</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
